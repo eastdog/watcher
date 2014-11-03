@@ -18,7 +18,7 @@ def parse_wcfgb(page, acrawler=None, num_attempt=1):
     except Exception, e:
         print 'catch an exception %s time(s)'%num_attempt
         num_attempt += 1
-        return parse_wcfgb(page, acrawler, num_attempt) if num_attempt<3 and acrawler else False
+        return parse_wcfgb(page, acrawler, num_attempt) if (num_attempt<3 and acrawler) else False
 
 if __name__ == '__main__':
 
